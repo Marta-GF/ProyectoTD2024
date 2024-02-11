@@ -1,12 +1,120 @@
 ---
-title: "Informe del proyecto"
-subtitle: "Tratamiento de los Datos"
+title: "Informe del Proyecto: Análisis exploratorio de Datos"
+subtitle: "Tratamiento de los Datos - Curso 2023/2024"
 author: "Grupo D"
 date: "2024-02-09"
-output: html_document
+output:
+  pdf_document:
+    number_sections: yes
+    citation_package: natbib
+    toc: no
+    latex_engine: pdflatex
+  html_document:
+    toc: no
+    df_print: paged
+tables: true
+params:
+  n_canton: 1
+  imagen: NULL
+classoption: 11pt
+header-includes:
+- \usepackage{natbib}
+- \usepackage{color}
+- \usepackage[spanish]{babel}
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \usepackage{booktabs}
+- \usepackage{color, colortbl}
+- \usepackage{setspace}
+- "\\definecolor{light-blue}{RGB}{153,204,255}"
+- "\\definecolor{light-red}{RGB}{255,153, 204}"
+- "\\definecolor{light-green}{RGB}{204, 255, 153}"
+- \usepackage{float}
+- \renewcommand{\baselinestretch}{1.25}
+- \usepackage{booktabs}
+- \usepackage{amsmath}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage[normalem]{ulem}
+- \usepackage{graphicx}
+- \usepackage{hyperref}
+- \usepackage{listings}
+- \usepackage{xcolor}
+- \definecolor{verde_oscuro}{HTML}{006400}
+- \lstset{
+  language=R,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{verde_oscuro},
+  morecomment=[l][\color{verde_oscuro}]{\#},
+  }
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+- \setlength\headheight{20pt}
+- \fancyhead[R]{\includegraphics[width=5cm]{fotoencabezado.png}}
+- \fancyhead[L]{Grado en Ciencia de Datos \\ Tratamiento de los Datos}
+editor_options:
+  markdown:
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Introducción
+
+(Aquí la introducción al proyecto)
+
+# Material y métodos
+
+(Aquí el material que hemos obtenido y que métodos vamos a usar para tratarlos)
+
+# Análisis
+
+(Aquí la realización del estudiio y las preguntas a plantear)
+
+# Resultados
+
+(Aquí los resultados que hemos obtenido)
+
+# Conclusiones
+
+(Aquí las conclusiones que hemos sacado sobre el proyecto)
+
+# Ejemplos provisionales de figuras con pie de página
+
+**Ejemplo 1:** Vamos a observar un gráfico hecho con código, la \hyperref[fig:figura1]{\textcolor{blue}{Figura 1}} (si se le da lleva a la figura, es un enlace).
+
+\label{fig:figura1}
+
+```{r pressure, echo = FALSE, fig.cap="Gráfico de ejemplo para mostrar un pie de imagen"}
+
+# Ejemplo de figura
+plot(pressure, main = "Gráfico de ejemplo", xlab = "Eje X", ylab = "Eje Y", 
+     col = "darkturquoise")
+
+```
+
+
+**Ejemplo 2:** Vamos a observar una imagen, la \hyperref[fig:figura2]{\textcolor{blue}{Figura 2}} (si se le da lleva a la figura, es un enlace).
+
+\label{fig:figura2}
+
+\begin{figure}
+  \centering
+  \includegraphics{ej_cap_plantilla.png}
+  \caption{Pie de página de la imagen de ejemplo}
+\end{figure}
+
+**Ejemplo 3:** Vamos a observar una figura hecha con *látex*, por ejemplo, veremos mejor una ecuación, la \hyperref[eq:ecuacion]{\textcolor{blue}{Ecuacion 1}} (si se le da lleva a la figura, es un enlace).
+
+\label{eq:ecuacion} $$
+e^{i\pi} + 1 = 0
+$$\hfill (1)
