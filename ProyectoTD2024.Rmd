@@ -67,12 +67,31 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+\bigskip
+
+\bigskip
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\bigskip
+
+\tableofcontents
+
+\bigskip
+
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+\newpage
 
 # Introducción
 
 (Aquí la introducción al proyecto)
 
 # Material y métodos
+
+## Materiales
+
+## Método ejemplo
 
 (Aquí el material que hemos obtenido y que métodos vamos a usar para tratarlos)
 
