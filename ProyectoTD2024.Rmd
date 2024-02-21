@@ -99,8 +99,9 @@ Una parte de los datos con los que hemos trabajado han sido proporcionados por e
 Realizamos la importación de los datos, para ello crearemos una lista con las cabeceras, otra con los productos (con sus cantidades y precios) y una última con las últimas líneas. 
 
 ```{r}
-# Cargar el paquete readr
-library(readr)
+# Cargar la librería readr
+suppressWarnings({ # Usamos esta función para que no se muestren los 'warnings'
+  library(readr)   # al compilar el documento
 
 # Ruta de la carpeta que contiene los archivos de tickets en formato texto
 ruta <- "data"
@@ -108,7 +109,8 @@ ruta <- "data"
 # Obtener la lista de archivos en la carpeta
 archivos <- list.files(path = ruta, full.names = TRUE)
 
-# Crear listas para almacenar las cabeceras, productos y últimas líneas de cada archivo
+# Crear listas para almacenar las cabeceras, productos y últimas líneas de 
+# cada archivo
 cabeceras <- list()
 productos <- list()
 ultimas_lineas <- list()
@@ -134,15 +136,14 @@ for (archivo in archivos) {
   cabeceras[[archivo]] <- cabecera
   productos[[archivo]] <- productos_temp
   ultimas_lineas[[archivo]] <- ultimas_lineas_temp
-  
-
 }
 
-#Mostramos las primeras líneas para ver el formato de cada lista
+})
+
+#Mostrar las primeras líneas para ver el formato de cada lista
 head(cabeceras[1])
 head(productos[1])
 head(ultimas_lineas[1])
-
 
 ```
 
