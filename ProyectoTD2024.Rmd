@@ -84,12 +84,17 @@ knitr::opts_chunk$set(echo = TRUE)
 \newpage
 
 # Introducción
+Este proyecto tiene por finalidad realizar un análisis exploratorio de los datos que se han recopilado de un supermercado, en concreto, Mercadona.
 
-(Aquí la introducción al proyecto)
+A partir de estos datos nos plantearemos unas cuestiones a resolver y realizaremos un estudio a partir de ellas, tratando de extraer conclusiones.
+
+Una parte de los datos con los que hemos trabajado han sido proporcionados por el profesorado y otra recopilados por los autores del proyecto. 
 
 # Material y métodos
+El material utilizado son diferentes tickets de distintos supermercados de una misma cadena.
 
 ## Materiales
+
 
 ## Método ejemplo
 
