@@ -96,6 +96,55 @@ Una parte de los datos con los que hemos trabajado han sido proporcionados por e
 
 ## Métodos de importación 
 
+Realizamos la importación de los datos, para ello crearemos una lista con las cabeceras, otra con los productos (con sus cantidades y precios) y una última con las últimas líneas. 
+
+```{r}
+# Cargar el paquete readr
+library(readr)
+
+# Ruta de la carpeta que contiene los archivos de tickets en formato texto
+ruta <- "data"
+
+# Obtener la lista de archivos en la carpeta
+archivos <- list.files(path = ruta, full.names = TRUE)
+
+# Crear listas para almacenar las cabeceras, productos y últimas líneas de cada archivo
+cabeceras <- list()
+productos <- list()
+ultimas_lineas <- list()
+
+# Recorrer cada archivo y procesar su contenido
+for (archivo in archivos) {
+  # Leer el contenido del archivo
+  contenido <- read_lines(archivo)
+ 
+  # Encontrar el índice de la palabra "TOTAL"
+  indice_total <- grep("TOTAL", contenido)
+ 
+  # Extraer las cabeceras (primeras 7 líneas)
+  cabecera <- contenido[1:min(7, length(contenido))]
+ 
+  # Extraer los productos
+  productos_temp <- contenido[8:(indice_total - 1)]
+ 
+  # Extraer las últimas líneas (después de "TOTAL")
+  ultimas_lineas_temp <- contenido[(indice_total + 1):length(contenido)]
+ 
+  # Almacenar las líneas en las listas correspondientes
+  cabeceras[[archivo]] <- cabecera
+  productos[[archivo]] <- productos_temp
+  ultimas_lineas[[archivo]] <- ultimas_lineas_temp
+  
+
+}
+
+#Mostramos las primeras líneas para ver el formato de cada lista
+head(cabeceras[1])
+head(productos[1])
+head(ultimas_lineas[1])
+
+
+```
 
 
 ## Método ejemplo
