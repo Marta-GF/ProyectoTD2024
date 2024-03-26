@@ -4,14 +4,14 @@ subtitle: "Tratamiento de los Datos - Curso 2023/2024"
 author: "Grupo D"
 date: "2024-02-09"
 output:
-  html_document:
-    toc: no
-    df_print: paged
   pdf_document:
     number_sections: yes
     citation_package: natbib
     toc: no
     latex_engine: pdflatex
+  html_document:
+    toc: no
+    df_print: paged
 tables: true
 params:
   n_canton: 1
@@ -157,6 +157,10 @@ head(productos[1])
 head(ultimas_lineas[1])
 
 ```
+## Método ejemplo
+
+(Aquí el material que hemos obtenido y que métodos vamos a usar para
+tratarlos)
 
 # Exploración y visualización
 
@@ -188,11 +192,6 @@ preguntas basadas en el estudio realizado:
 9.  Observando el estudio, ¿se podría hacer una predicción de cuál es la
     media de precio que gastan los clientes en este supermercado o
     faltarían datos?
-
-## Método ejemplo
-
-(Aquí el material que hemos obtenido y que métodos vamos a usar para
-tratarlos)
 
 # Análisis
 
