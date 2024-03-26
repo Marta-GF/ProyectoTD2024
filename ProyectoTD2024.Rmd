@@ -154,7 +154,7 @@ head(ultimas_lineas[1])
 
 # Análisis
 
-(Aquí la realización del estudiio y las preguntas a plantear)
+(Aquí la realización del estudio y las preguntas a plantear)
 
 # Resultados
 
