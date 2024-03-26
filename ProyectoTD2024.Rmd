@@ -4,14 +4,14 @@ subtitle: "Tratamiento de los Datos - Curso 2023/2024"
 author: "Grupo D"
 date: "2024-02-09"
 output:
+  html_document:
+    toc: no
+    df_print: paged
   pdf_document:
     number_sections: yes
     citation_package: natbib
     toc: no
     latex_engine: pdflatex
-  html_document:
-    toc: no
-    df_print: paged
 tables: true
 params:
   n_canton: 1
@@ -67,6 +67,7 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 \bigskip
 
 \bigskip
@@ -84,19 +85,29 @@ knitr::opts_chunk$set(echo = TRUE)
 \newpage
 
 # Introducción
-Este proyecto tiene por finalidad realizar un análisis exploratorio de los datos que se han recopilado de un supermercado, en concreto, Mercadona.
 
-A partir de estos datos nos plantearemos unas cuestiones a resolver y realizaremos un estudio a partir de ellas, tratando de extraer conclusiones.
- 
+Este proyecto tiene por finalidad realizar un análisis exploratorio de
+los datos que se han recopilado de un supermercado, en concreto,
+Mercadona.
 
-# Materiales 
-El material utilizado son diferentes tickets de distintos supermercados de una misma cadena.
+A partir de estos datos nos plantearemos unas cuestiones a resolver y
+realizaremos un estudio a partir de ellas, tratando de extraer
+conclusiones.
 
-Una parte de los datos con los que hemos trabajado han sido proporcionados por el profesorado y otra recopilados por los autores del proyecto.
+# Materiales
 
-## Métodos de importación 
+El material utilizado son diferentes tickets de distintos supermercados
+de una misma cadena.
 
-Realizamos la importación de los datos, para ello crearemos una lista con las cabeceras, otra con los productos (con sus cantidades y precios) y una última con las últimas líneas. 
+Una parte de los datos con los que hemos trabajado han sido
+proporcionados por el profesorado y otra recopilados por los autores del
+proyecto.
+
+## Métodos de importación
+
+Realizamos la importación de los datos, para ello crearemos una lista
+con las cabeceras, otra con los productos (con sus cantidades y precios)
+y una última con las últimas líneas.
 
 ```{r}
 # Cargar la librería readr
@@ -147,48 +158,41 @@ head(ultimas_lineas[1])
 
 ```
 
+# Exploración y visualización
 
+Observando nuestros datos, nuestro equipo ha planteado unas ciertas
+preguntas basadas en el estudio realizado:
 
-#Exploración y visualización
-
-Observando nuestros datos, nuestro equipo ha planteado unas ciertas preguntas
-basadas en el estudio realizado:
-
-1. Siguiendo la distribución de los datos, ¿se puede observar alguna tendencia
-a la compra de determinados productos específicos?
-
-2.Observando las listas y relacionandolas, ¿Se puede encontrar alguna relación
-entre la cantidad de productos y si el cliente ha utilizado el parking o no?
-
-3.¿Existirá una diferencia relevante entre los clientes que han utlizado el 
-mercadona de una localización concreta y aquellos que han asistido a otro de 
-diferente localización?
-
-4.¿Se puede llegar a relacionar las variables catégoricas de nuestro estudio 
-con las variables númericas?¿Entre cuáles podemos establecer relación si se
-diera  el caso?
-
-5.¿Habrá una cierta tendencia por parte del cliente a comprar más cantidad de 
-productos si los precios son menores o más reducidos?¿El nombre influye en esta
-relación?
-
-6.En nuetsro conjunto de datos, podríamos aplicar el algoritmo del clustering 
-para encontrar datos atípicos o excepciones en nuestro estudio, o 
-no sería posible?
-
-7.¿Dependerá la localización del supermercado, de si los clientes hacen uso o 
-no del parking de este?En caso de que no,¿Podrías relacionar este hecho con otra
-variable?
-
-8.¿Las variables categóricas tienen alguna influencia o dependen unas sobre 
-otras?¿Y las númericas?
-
-9.Observando el estudio, ¿se podría hacer una predicción de cual es la media de 
-precio que gastan los clientes en este supermercado o faltarían datos?
+1.  Siguiendo la distribución de los datos, ¿se puede observar alguna
+    tendencia a la compra de determinados productos específicos?
+2.  Observando las listas y relacionandolas, ¿Se puede encontrar alguna
+    relación entre la cantidad de productos y si el cliente ha utilizado
+    el parking o no?
+3.  ¿Existirá una diferencia relevante entre los clientes que han
+    utlizado el mercadona de una localización concreta y aquellos que
+    han asistido a otro de diferente localización?
+4.  ¿Se puede llegar a relacionar las variables categóricas de nuestro
+    estudio con las variables númericas?¿Entre cuáles podemos establecer
+    relación si se diera el caso?
+5.  ¿Habrá una cierta tendencia por parte del cliente a comprar más
+    cantidad de productos si los precios son menores o más reducidos?¿El
+    nombre influye en esta relación?
+6.  En nuestro conjunto de datos, ¿podríamos aplicar el algoritmo del
+    *clustering* para encontrar datos atípicos o excepciones en nuestro
+    estudio? ¿O no sería posible?
+7.  ¿Dependerá la localización del supermercado, de si los clientes
+    hacen uso o no del parking de este? En caso de que no, ¿Se podría
+    relacionar este hecho con otra variable?
+8.  ¿Las variables categóricas tienen alguna influencia o dependen unas
+    sobre otras? ¿Y las númericas?
+9.  Observando el estudio, ¿se podría hacer una predicción de cuál es la
+    media de precio que gastan los clientes en este supermercado o
+    faltarían datos?
 
 ## Método ejemplo
 
-(Aquí el material que hemos obtenido y que métodos vamos a usar para tratarlos)
+(Aquí el material que hemos obtenido y que métodos vamos a usar para
+tratarlos)
 
 # Análisis
 
@@ -204,7 +208,9 @@ precio que gastan los clientes en este supermercado o faltarían datos?
 
 # Ejemplos provisionales de figuras con pie de página
 
-**Ejemplo 1:** Vamos a observar un gráfico hecho con código, la \hyperref[fig:figura1]{\textcolor{blue}{Figura 1}} (si se le da lleva a la figura, es un enlace).
+**Ejemplo 1:** Vamos a observar un gráfico hecho con código, la
+\hyperref[fig:figura1]{\textcolor{blue}{Figura 1}} (si se le da lleva a
+la figura, es un enlace).
 
 \label{fig:figura1}
 
@@ -216,18 +222,23 @@ plot(pressure, main = "Gráfico de ejemplo", xlab = "Eje X", ylab = "Eje Y",
 
 ```
 
-
-**Ejemplo 2:** Vamos a observar una imagen, la \hyperref[fig:figura2]{\textcolor{blue}{Figura 2}} (si se le da lleva a la figura, es un enlace).
+**Ejemplo 2:** Vamos a observar una imagen, la
+\hyperref[fig:figura2]{\textcolor{blue}{Figura 2}} (si se le da lleva a
+la figura, es un enlace).
 
 \label{fig:figura2}
 
+```{=tex}
 \begin{figure}
   \centering
   \includegraphics{ej_cap_plantilla.png}
   \caption{Pie de página de la imagen de ejemplo}
 \end{figure}
-
-**Ejemplo 3:** Vamos a observar una figura hecha con *látex*, por ejemplo, veremos mejor una ecuación, la \hyperref[eq:ecuacion]{\textcolor{blue}{Ecuacion 1}} (si se le da lleva a la figura, es un enlace).
+```
+**Ejemplo 3:** Vamos a observar una figura hecha con *látex*, por
+ejemplo, veremos mejor una ecuación, la
+\hyperref[eq:ecuacion]{\textcolor{blue}{Ecuacion 1}} (si se le da lleva
+a la figura, es un enlace).
 
 \label{eq:ecuacion} $$
 e^{i\pi} + 1 = 0
