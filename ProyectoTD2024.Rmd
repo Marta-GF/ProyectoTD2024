@@ -148,13 +148,51 @@ head(ultimas_lineas[1])
 ```
 
 
+
+#Exploración y visualización
+
+Observando nuestros datos, nuestro equipo ha planteado unas ciertas preguntas
+basadas en el estudio realizado:
+
+1. Siguiendo la distribución de los datos, ¿se puede observar alguna tendencia
+a la compra de determinados productos específicos?
+
+2.Observando las listas y relacionandolas, ¿Se puede encontrar alguna relación
+entre la cantidad de productos y si el cliente ha utilizado el parking o no?
+
+3.¿Existirá una diferencia relevante entre los clientes que han utlizado el 
+mercadona de una localización concreta y aquellos que han asistido a otro de 
+diferente localización?
+
+4.¿Se puede llegar a relacionar las variables catégoricas de nuestro estudio 
+con las variables númericas?¿Entre cuáles podemos establecer relación si se
+diera  el caso?
+
+5.¿Habrá una cierta tendencia por parte del cliente a comprar más cantidad de 
+productos si los precios son menores o más reducidos?¿El nombre influye en esta
+relación?
+
+6.En nuetsro conjunto de datos, podríamos aplicar el algoritmo del clustering 
+para encontrar datos atípicos o excepciones en nuestro estudio, o 
+no sería posible?
+
+7.¿Dependerá la localización del supermercado, de si los clientes hacen uso o 
+no del parking de este?En caso de que no,¿Podrías relacionar este hecho con otra
+variable?
+
+8.¿Las variables categóricas tienen alguna influencia o dependen unas sobre 
+otras?¿Y las númericas?
+
+9.Observando el estudio, ¿se podría hacer una predicción de cual es la media de 
+precio que gastan los clientes en este supermercado o faltarían datos?
+
 ## Método ejemplo
 
 (Aquí el material que hemos obtenido y que métodos vamos a usar para tratarlos)
 
 # Análisis
 
-(Aquí la realización del estudio y las preguntas a plantear)
+(Aquí la realización del estudio)
 
 # Resultados
 
